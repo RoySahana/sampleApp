@@ -28,7 +28,7 @@ app.get('/api', (req, res) => {
 	var q = url.parse(req.url, true).query;
 	res.write("</br>");
 	var name = q.candidatename;
-	fs.writeFile('1.txt',name,function(err){
+	fs.appendFile('1.txt',name,function(err){
 		if(err)throw err;
 		console.log("saved");
 	});
