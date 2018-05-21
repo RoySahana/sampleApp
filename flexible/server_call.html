@@ -13,7 +13,7 @@
 	angular.module('mainApp',[])
 	.controller('Mainctrl',['$http',function($http){
 	
-		$http.get('http://portfoliosahana.appspot.com:8080/api/?candidatename=Sahana',  {
+		$http.get('https://portfoliosahana.appspot.com/api/?candidatename=Sahana',  {
 		  params: {
 			params : "ani"
 		  }
@@ -26,7 +26,7 @@
 						console.log("hi");
 						
 		this.candidateSub = function(){
-			var utrl = "http://portfoliosahana.appspot.com:8080/api/?candidateName=" + this.candidateName;
+			var utrl = "https://portfoliosahana.appspot.com/api/?candidatename=" + this.candidateName;
 			console.log(utrl);
 	$http.get(utrl, {		
 		}).then(function(response){

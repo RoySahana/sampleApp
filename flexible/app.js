@@ -18,7 +18,7 @@
 // [START app]
 const express = require('express');
 var url = require('url');
-//var fs = require('fs');
+var fs = require('fs');
 
 const app = express();
 
@@ -28,10 +28,10 @@ app.get('/api', (req, res) => {
 	var q = url.parse(req.url, true).query;
 	res.write("</br>");
 	var name = q.candidatename;
-	/*fs.writeFile('1.txt',name,function(err){
+	fs.writeFile('1.txt',name,function(err){
 		if(err)throw err;
 		console.log("saved");
-	});*/
+	});
 	console.log(name);
 	res.end(name);
   //res.status(200).send('Hello, world Siyona 1234567!').end();
